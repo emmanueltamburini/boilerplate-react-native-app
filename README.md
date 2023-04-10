@@ -2,7 +2,7 @@
 
 ## ComponentsApp README
 
-This application has designed to simulate a Pokedex, in this app you will be able to watch every pokemon and their descriptions in a very friendly interface.
+This application has designed to create a basic configuration app to start any project from this app. It has a stack navigator, Icons, ThemeContext and some useful components and hooks.
 
 ### Getting started
 
