@@ -1,14 +1,14 @@
 import React from 'react';
-import {Text, StyleSheet} from 'react-native';
+import {StyleSheet, SafeAreaView} from 'react-native';
 import {ThemeText} from '../components/ThemeText';
 
 export const TestScreen = () => {
   const styles = stylesFunction();
 
   return (
-    <ThemeText style={styles.container}>
-      <Text>TestScreen</Text>
-    </ThemeText>
+    <SafeAreaView style={styles.container}>
+      <ThemeText>TestScreen</ThemeText>
+    </SafeAreaView>
   );
 };
 
