@@ -2,6 +2,7 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import {Navigator} from './src/navigator/navigator';
 import {ThemeProvider} from './src/context/ThemeContext';
+import {PermissionProvider} from './src/context/PermissionContext';
 
 interface Props {
   children: JSX.Element | JSX.Element[];
@@ -16,5 +17,9 @@ export const App = () => {
 };
 
 const AppState = ({children}: Props) => {
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return (
+    <PermissionProvider>
+      <ThemeProvider>{children}</ThemeProvider>
+    </PermissionProvider>
+  );
 };

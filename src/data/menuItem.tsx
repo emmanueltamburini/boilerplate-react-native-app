@@ -6,4 +6,9 @@ export const menuItems: MenuItem[] = [
     icon: 'alert-circle-outline',
     component: 'TestScreen',
   },
+  {
+    name: 'Permission',
+    icon: 'alert-circle-outline',
+    component: 'PermissionScreen',
+  },
 ];
