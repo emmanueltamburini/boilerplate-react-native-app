@@ -17,3 +17,4 @@ This project use the following dependencies:
 - [React Navigation - Getting started](<https://reactnavigation.org/docs/getting-started/>)
 - [React Navigation - Stack navigator](<https://reactnavigation.org/docs/stack-navigator/>)
 - [React Native Vector Icons](<https://github.com/oblador/react-native-vector-icons>)
+- [React Native Permissions](<https://www.npmjs.com/package/react-native-permissions>)
