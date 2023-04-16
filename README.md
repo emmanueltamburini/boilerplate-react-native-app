@@ -1,6 +1,6 @@
-# ComponentsApp
+# BoilerplateApp
 
-## ComponentsApp README
+## BoilerplateApp README
 
 This application has designed to create a basic configuration app to start any project from this app. It has a stack navigator, Icons, ThemeContext and some useful components and hooks.
 
