@@ -6,7 +6,7 @@ import {
   permissionInitState,
 } from '../context/PermissionContext';
 import {LoadingScreen} from './LoadingScreen';
-import MapView from 'react-native-maps';
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 
 export const PermissionScreen = () => {
   const styles = stylesFunction();
@@ -26,6 +26,7 @@ export const PermissionScreen = () => {
       {permissions.locationStatus === 'granted' ? (
         <MapView
           style={styles.containerMap}
+          provider={PROVIDER_GOOGLE}
           initialRegion={{
             latitude: 37.78825,
             longitude: -122.4324,
