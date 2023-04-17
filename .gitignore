@@ -64,3 +64,4 @@ yarn-error.log
 
 .env
 android/gradle.properties
+ios/App/AppDelegate.mm
