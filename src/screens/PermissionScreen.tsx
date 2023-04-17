@@ -6,6 +6,7 @@ import {
   permissionInitState,
 } from '../context/PermissionContext';
 import {LoadingScreen} from './LoadingScreen';
+import MapView from 'react-native-maps';
 
 export const PermissionScreen = () => {
   const styles = stylesFunction();
@@ -16,9 +17,22 @@ export const PermissionScreen = () => {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView
+      style={
+        permissions.locationStatus === 'granted'
+          ? styles.containerMap
+          : styles.container
+      }>
       {permissions.locationStatus === 'granted' ? (
-        <ThemeText>PermissionGranted</ThemeText>
+        <MapView
+          style={styles.containerMap}
+          initialRegion={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+        />
       ) : (
         <>
           <ThemeText>PermissionScreen</ThemeText>
@@ -36,5 +50,8 @@ const stylesFunction = () =>
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
+    },
+    containerMap: {
+      flex: 1,
     },
   });
