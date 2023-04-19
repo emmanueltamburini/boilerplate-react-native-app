@@ -9,16 +9,18 @@ interface Props {
   onPress: () => void;
   style?: StyleProp<ViewStyle>;
   ignoreTheme?: boolean;
+  useContrastColor?: boolean;
 }
 
 export const ThemeButton = ({
   title,
   onPress,
   ignoreTheme,
+  useContrastColor,
   style = {},
 }: Props) => {
   const {theme} = useContext(ThemeContext);
-  const styles = stylesFunction(style, theme, ignoreTheme);
+  const styles = stylesFunction(style, theme, ignoreTheme, useContrastColor);
 
   return (
     <TouchableOpacity
@@ -36,12 +38,21 @@ const stylesFunction = (
   style: StyleProp<ViewStyle>,
   theme: ThemeState,
   ignoreTheme?: boolean,
-) =>
-  StyleSheet.create({
+  useContrastColor?: boolean,
+) => {
+  let backgroundColor = ignoreTheme ? 'black' : theme.colors.primary;
+  let color = ignoreTheme ? 'white' : theme.colors.text;
+
+  if (useContrastColor) {
+    backgroundColor = theme.colors.text;
+    color = theme.colors.background;
+  }
+
+  return StyleSheet.create({
     container: {
       width: 200,
       height: 45,
-      backgroundColor: ignoreTheme ? 'black' : theme.colors.primary,
+      backgroundColor,
       borderRadius: 50,
       justifyContent: 'center',
       alignItems: 'center',
@@ -57,6 +68,7 @@ const stylesFunction = (
     },
     text: {
       fontSize: 18,
-      color: ignoreTheme ? 'white' : theme.colors.text,
+      color,
     },
   });
+};

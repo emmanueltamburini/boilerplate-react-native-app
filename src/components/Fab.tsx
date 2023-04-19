@@ -26,7 +26,12 @@ export const Fab = ({iconName, onPress, style: style = {}}: Props) => {
         activeOpacity={0.75}
         onPress={onPress}
         style={currentStyle.fabBottom}>
-        <Icon name={iconName} color={theme.colors.text} size={30} />
+        <Icon
+          name={iconName}
+          color={theme.colors.text}
+          size={30}
+          style={currentStyle.icon}
+        />
       </TouchableOpacity>
     </View>
   );
@@ -50,5 +55,8 @@ const styleFunction = (theme: ThemeState) =>
       shadowOpacity: 0.27,
       shadowRadius: 4.65,
       elevation: 6,
+    },
+    icon: {
+      left: 1,
     },
   });
