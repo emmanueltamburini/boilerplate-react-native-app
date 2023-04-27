@@ -5,11 +5,13 @@ import {NavigationContainer} from '@react-navigation/native';
 import {ThemeContext} from '../context/ThemeContext';
 import {TestScreen} from '../screens/TestScreen';
 import {PermissionScreen} from '../screens/PermissionScreen';
+import {TestScreen2} from '../screens/TestScreen2';
 
 export type RootStackParams = {
   HomeScreen: undefined;
   TestScreen: undefined;
   PermissionScreen: undefined;
+  TestScreen2: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -26,6 +28,7 @@ export const Navigator = () => {
         }}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="TestScreen" component={TestScreen} />
+        <Stack.Screen name="TestScreen2" component={TestScreen2} />
         <Stack.Screen name="PermissionScreen" component={PermissionScreen} />
       </Stack.Navigator>
     </NavigationContainer>
