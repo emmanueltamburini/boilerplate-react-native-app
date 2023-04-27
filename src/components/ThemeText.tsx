@@ -22,16 +22,13 @@ const stylesFunction = (
   ignoreTheme?: boolean,
 ) => {
   const currentStyle = style ? style : {};
-  return ignoreTheme
-    ? StyleSheet.create({
-        text: {
-          ...(currentStyle as any),
-        },
-      })
-    : StyleSheet.create({
-        text: {
-          ...(currentStyle as any),
-          color: theme.colors.text,
-        },
-      });
+
+  const color = ignoreTheme ? 'white' : theme.colors.text;
+
+  return StyleSheet.create({
+    text: {
+      color,
+      ...(currentStyle as any),
+    },
+  });
 };

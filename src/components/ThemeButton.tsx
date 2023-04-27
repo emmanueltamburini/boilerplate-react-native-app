@@ -1,15 +1,22 @@
 import React, {useContext} from 'react';
-import {StyleSheet, TouchableOpacity, StyleProp, ViewStyle} from 'react-native';
+import {
+  StyleSheet,
+  TouchableOpacity,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+} from 'react-native';
 import {ThemeText} from './ThemeText';
 import {ThemeContext} from '../context/ThemeContext';
 import {ThemeState} from '../context/themeReducer';
 
 interface Props {
-  title: string;
+  title: string | React.ReactNode;
   onPress: () => void;
   style?: StyleProp<ViewStyle>;
   ignoreTheme?: boolean;
   useContrastColor?: boolean;
+  textStyle?: StyleProp<TextStyle>;
 }
 
 export const ThemeButton = ({
@@ -17,17 +24,24 @@ export const ThemeButton = ({
   onPress,
   ignoreTheme,
   useContrastColor,
+  textStyle = {},
   style = {},
 }: Props) => {
   const {theme} = useContext(ThemeContext);
-  const styles = stylesFunction(style, theme, ignoreTheme, useContrastColor);
+  const styles = stylesFunction(
+    style,
+    theme,
+    ignoreTheme,
+    useContrastColor,
+    textStyle,
+  );
 
   return (
     <TouchableOpacity
-      activeOpacity={0.9}
+      activeOpacity={0.8}
       onPress={onPress}
       style={styles.container}>
-      <ThemeText ignoreTheme style={styles.text}>
+      <ThemeText ignoreTheme={ignoreTheme} style={styles.text}>
         {title}
       </ThemeText>
     </TouchableOpacity>
@@ -39,6 +53,7 @@ const stylesFunction = (
   theme: ThemeState,
   ignoreTheme?: boolean,
   useContrastColor?: boolean,
+  textStyle?: StyleProp<TextStyle>,
 ) => {
   let backgroundColor = ignoreTheme ? 'black' : theme.colors.primary;
   let color = ignoreTheme ? 'white' : theme.colors.text;
@@ -69,6 +84,7 @@ const stylesFunction = (
     text: {
       fontSize: 18,
       color,
+      ...(textStyle as any),
     },
   });
 };

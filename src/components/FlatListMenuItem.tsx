@@ -4,7 +4,7 @@ import {MenuItem} from '../interfaces/appInterfaces';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/core';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParams} from '../navigator/navigator';
+import {RootStackParams} from '../navigator/Navigator';
 import {ThemeContext} from '../context/ThemeContext';
 import {ThemeText} from './ThemeText';
 
