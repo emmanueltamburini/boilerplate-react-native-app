@@ -1,6 +1,7 @@
 import React from 'react';
-import {StyleSheet, SafeAreaView} from 'react-native';
-import {ThemeText} from '../components/ThemeText';
+import {SafeAreaView} from 'react-native';
+import {ThemeText} from '../../components/ThemeText';
+import {stylesFunction} from './styles';
 
 export const TestScreen = () => {
   const styles = stylesFunction();
@@ -11,10 +12,3 @@ export const TestScreen = () => {
     </SafeAreaView>
   );
 };
-
-const stylesFunction = () =>
-  StyleSheet.create({
-    container: {
-      flex: 1,
-    },
-  });
