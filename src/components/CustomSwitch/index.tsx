@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Switch, Platform} from 'react-native';
-import {ThemeContext} from '../context/ThemeContext';
+import {ThemeContext} from '../../context/ThemeContext';
 
 interface Props {
   isOn: boolean;

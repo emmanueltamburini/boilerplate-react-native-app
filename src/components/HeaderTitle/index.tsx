@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
-import {globalStyles} from '../theme/appTheme';
+import {View} from 'react-native';
+import {globalStyles} from '../../theme/appTheme';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {ThemeText} from './ThemeText';
+import {ThemeText} from '../ThemeText';
+import {stylesFunction} from './styles';
 
 interface Props {
   title: string;
@@ -20,11 +21,3 @@ export const HeaderTitle = ({title, avoidTop, avoidBottom}: Props) => {
     </View>
   );
 };
-
-const stylesFunction = (top: number, bottom: number) =>
-  StyleSheet.create({
-    header: {
-      marginTop: top + 20,
-      marginBottom: bottom,
-    },
-  });

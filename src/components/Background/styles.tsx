@@ -1,26 +1,8 @@
-import React, {useContext} from 'react';
-import {View, StyleSheet, useWindowDimensions, ScaledSize} from 'react-native';
-import {ThemeContext} from '../context/ThemeContext';
-import {ThemeState} from '../context/themeReducer';
-import {bigWidthScreen} from '../helpers/utils';
+import {StyleSheet, ScaledSize} from 'react-native';
+import {ThemeState} from '../../context/themeReducer';
+import {bigWidthScreen} from '../../helpers/utils';
 
-interface Props {
-  allColor?: boolean;
-}
-
-export const Background = ({allColor}: Props) => {
-  const {theme} = useContext(ThemeContext);
-  const dimensions = useWindowDimensions();
-  const styles = stylesFunction(theme, dimensions);
-
-  return allColor ? (
-    <View style={styles.containerAllColor} />
-  ) : (
-    <View style={styles.container} />
-  );
-};
-
-const stylesFunction = (theme: ThemeState, dimensions: ScaledSize) => {
+export const stylesFunction = (theme: ThemeState, dimensions: ScaledSize) => {
   const width = bigWidthScreen(dimensions)
     ? dimensions.width * 1.4
     : dimensions.width * 2.1;
