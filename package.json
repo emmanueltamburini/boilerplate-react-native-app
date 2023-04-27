@@ -11,6 +11,7 @@
     "postinstall": "react-native setup-ios-permissions && pod-install"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.18.1",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/stack": "^6.3.16",
     "@types/react-native-vector-icons": "^6.4.13",

@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, StyleSheet, FlatList} from 'react-native';
-import {globalStyles} from '../theme/appTheme';
-import {FlatListMenuItem} from '../components/FlatListMenuItem';
-import {menuItems} from '../data/menuItem';
-import {HeaderTitle} from '../components/HeaderTitle';
-import {ItemSeparator} from '../components/ItemSeparator';
+import {View, FlatList} from 'react-native';
+import {FlatListMenuItem} from '../../components/FlatListMenuItem';
+import {menuItems} from '../../data/menuItem';
+import {HeaderTitle} from '../../components/HeaderTitle';
+import {ItemSeparator} from '../../components/ItemSeparator';
+import {stylesFunction} from './styles';
 
 export const HomeScreen = () => {
   const styles = stylesFunction();
@@ -22,11 +22,3 @@ export const HomeScreen = () => {
     </View>
   );
 };
-
-const stylesFunction = () =>
-  StyleSheet.create({
-    container: {
-      flex: 1,
-      ...globalStyles().globalMargin,
-    },
-  });

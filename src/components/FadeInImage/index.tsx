@@ -1,14 +1,14 @@
 import React, {useContext, useState} from 'react';
 import {
-  StyleSheet,
   Animated,
   View,
   ActivityIndicator,
   StyleProp,
   ImageStyle,
 } from 'react-native';
-import {useAnimation} from '../hooks/useAnimation';
-import {ThemeContext} from '../context/ThemeContext';
+import {useAnimation} from '../../hooks/useAnimation';
+import {ThemeContext} from '../../context/ThemeContext';
+import {stylesFunction} from './styles';
 
 interface Props {
   uri: string;
@@ -43,28 +43,4 @@ export const FadeInImage = ({uri, style}: Props) => {
       />
     </View>
   );
-};
-
-const stylesFunction = (
-  opacity: Animated.Value,
-  style?: StyleProp<ImageStyle>,
-) => {
-  const styles = StyleSheet.create({
-    container: {
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    activityIndicator: {
-      position: 'absolute',
-    },
-  });
-
-  const image = {
-    width: '100%',
-    height: 400,
-    ...(style as any),
-    opacity,
-  };
-
-  return {...styles, image};
 };
