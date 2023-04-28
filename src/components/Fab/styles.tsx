@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {ThemeState} from '../../context/Theme/themeReducer';
+import {globalStyles} from '../../theme/appTheme';
 
 export const styleFunction = (theme: ThemeState) =>
   StyleSheet.create({
@@ -11,14 +12,7 @@ export const styleFunction = (theme: ThemeState) =>
       borderRadius: 100,
       justifyContent: 'center',
       alignItems: 'center',
-      shadowColor: '#000',
-      shadowOffset: {
-        width: 0,
-        height: 3,
-      },
-      shadowOpacity: 0.27,
-      shadowRadius: 4.65,
-      elevation: 6,
+      ...globalStyles().shadow,
     },
     icon: {
       left: 1,

@@ -1,5 +1,6 @@
 import {StyleSheet, StyleProp, ViewStyle, TextStyle} from 'react-native';
 import {ThemeState} from '../../../context/Theme/themeReducer';
+import {globalStyles} from '../../../theme/appTheme';
 
 export const stylesFunction = (
   style: StyleProp<ViewStyle>,
@@ -24,14 +25,7 @@ export const stylesFunction = (
       borderRadius: 50,
       justifyContent: 'center',
       alignItems: 'center',
-      shadowColor: '#000',
-      shadowOffset: {
-        width: 0,
-        height: 3,
-      },
-      shadowOpacity: 0.27,
-      shadowRadius: 7.49,
-      elevation: 6,
+      ...globalStyles().shadow,
       ...(style as any),
     },
     text: {
