@@ -17,6 +17,11 @@ export const menuItems: MenuItem[] = [
     component: 'TestScreen3',
   },
   {
+    name: 'Test 4',
+    icon: 'albums-outline',
+    component: 'TestScreen4',
+  },
+  {
     name: 'Permission',
     icon: 'alert-circle-outline',
     component: 'PermissionScreen',
