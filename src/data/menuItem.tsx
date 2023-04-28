@@ -8,8 +8,18 @@ export const menuItems: MenuItem[] = [
   },
   {
     name: 'Test 2',
-    icon: 'alert-circle-outline',
+    icon: 'airplane-outline',
     component: 'TestScreen2',
+  },
+  {
+    name: 'Test 3',
+    icon: 'alarm-outline',
+    component: 'TestScreen3',
+  },
+  {
+    name: 'Test 4',
+    icon: 'albums-outline',
+    component: 'TestScreen4',
   },
   {
     name: 'Permission',

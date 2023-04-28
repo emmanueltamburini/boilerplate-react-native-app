@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import {ThemeText} from '../../components/ThemeText';
+import {ThemeText} from '../../components/ThemeComponents/ThemeText';
 import {Background} from '../../components/Background';
 import {stylesFunction} from './styles';
 

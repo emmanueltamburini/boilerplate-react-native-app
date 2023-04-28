@@ -10,8 +10,14 @@ export const useForm = <T extends Object>(initialForm: T) => {
     });
   };
 
+  const setFormValue = (newForm: T, allValues = false) => {
+    allValues ? setForm(newForm) : setForm({...form, ...newForm});
+  };
+
   return {
     ...form,
+    form,
     onChange,
+    setFormValue,
   };
 };
