@@ -16,4 +16,9 @@ export const menuItems: MenuItem[] = [
     icon: 'alarm-outline',
     component: 'TestScreen3',
   },
+  {
+    name: 'Test 4',
+    icon: 'albums-outline',
+    component: 'TestScreen4',
+  },
 ];
