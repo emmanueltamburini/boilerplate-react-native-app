@@ -10,6 +10,9 @@ interface Props {
   style?: StyleProp<ViewStyle>;
   ignoreTheme?: boolean;
   useContrastColor?: boolean;
+  danger?: boolean;
+  warning?: boolean;
+  success?: boolean;
   textStyle?: StyleProp<TextStyle>;
 }
 
@@ -18,17 +21,23 @@ export const ThemeButton = ({
   onPress,
   ignoreTheme,
   useContrastColor,
+  danger,
+  warning,
+  success,
   textStyle = {},
   style = {},
 }: Props) => {
   const {theme} = useContext(ThemeContext);
-  const styles = stylesFunction(
+  const styles = stylesFunction({
     style,
     theme,
     ignoreTheme,
     useContrastColor,
+    danger,
+    warning,
+    success,
     textStyle,
-  );
+  });
 
   return (
     <TouchableOpacity

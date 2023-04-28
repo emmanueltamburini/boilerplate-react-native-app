@@ -15,7 +15,7 @@ export interface ThemeState extends Theme {
   secondary: string;
   danger: string;
   success: string;
-  alert: string;
+  warning: string;
 }
 
 const lightColors = {
@@ -45,7 +45,7 @@ export const lightTheme: ThemeState = {
   secondary: '#75CEDB',
   danger: 'red',
   success: 'green',
-  alert: 'yellow',
+  warning: 'yellow',
   colors: {...lightColors},
 };
 
@@ -58,7 +58,7 @@ export const darkTheme: ThemeState = {
   secondary: '#084F6A',
   danger: 'red',
   success: 'green',
-  alert: 'yellow',
+  warning: 'yellow',
   colors: {...darkColors},
 };
 

@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import {SafeAreaView, View} from 'react-native';
+import {Alert, SafeAreaView, View} from 'react-native';
 import {ThemeText} from '../../components/ThemeComponents/ThemeText';
 import {stylesFunction} from './styles';
 import {InputTheme} from '../../components/ThemeComponents/InputTheme';
@@ -32,11 +32,13 @@ export const TestScreen3 = () => {
 
   const onSave = () => {
     storeObjectData('form', form);
+    Alert.alert('Form saved', 'Form has saved in phone');
   };
 
   const onDelete = () => {
     removeData('form');
     setFormValue({name: ''});
+    Alert.alert('Form deleted', 'Form has deleted in phone');
   };
 
   return (
@@ -49,9 +51,19 @@ export const TestScreen3 = () => {
         label="Name"
       />
       <View style={styles.buttonContainer}>
-        <ThemeButton title="Save" style={styles.button} onPress={onSave} />
+        <ThemeButton
+          title="Save"
+          style={styles.button}
+          onPress={onSave}
+          success
+        />
         <View style={styles.spacer} />
-        <ThemeButton title="Delete" style={styles.button} onPress={onDelete} />
+        <ThemeButton
+          title="Delete"
+          style={styles.button}
+          onPress={onDelete}
+          danger
+        />
       </View>
       <ThemeText>{JSON.stringify(form, null, 5)}</ThemeText>
     </SafeAreaView>

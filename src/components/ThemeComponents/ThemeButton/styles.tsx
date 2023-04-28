@@ -2,19 +2,45 @@ import {StyleSheet, StyleProp, ViewStyle, TextStyle} from 'react-native';
 import {ThemeState} from '../../../context/Theme/themeReducer';
 import {globalStyles} from '../../../theme/appTheme';
 
-export const stylesFunction = (
-  style: StyleProp<ViewStyle>,
-  theme: ThemeState,
-  ignoreTheme?: boolean,
-  useContrastColor?: boolean,
-  textStyle?: StyleProp<TextStyle>,
-) => {
+interface Props {
+  style: StyleProp<ViewStyle>;
+  theme: ThemeState;
+  ignoreTheme?: boolean;
+  useContrastColor?: boolean;
+  danger?: boolean;
+  warning?: boolean;
+  success?: boolean;
+  textStyle?: StyleProp<TextStyle>;
+}
+
+export const stylesFunction = ({
+  style,
+  theme,
+  ignoreTheme,
+  useContrastColor,
+  danger,
+  warning,
+  success,
+  textStyle,
+}: Props) => {
   let backgroundColor = ignoreTheme ? undefined : theme.primary;
   let color = ignoreTheme ? undefined : theme.text;
 
   if (useContrastColor) {
     backgroundColor = theme.text;
     color = theme.background;
+  }
+
+  if (danger) {
+    backgroundColor = theme.danger;
+  }
+
+  if (warning) {
+    backgroundColor = theme.warning;
+  }
+
+  if (success) {
+    backgroundColor = theme.success;
   }
 
   return StyleSheet.create({
