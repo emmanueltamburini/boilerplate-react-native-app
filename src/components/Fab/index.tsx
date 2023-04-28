@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {View, TouchableOpacity, StyleProp, ViewStyle} from 'react-native';
-import {ThemeContext} from '../../context/ThemeContext';
+import {ThemeContext} from '../../context/Theme/ThemeContext';
 import {styleFunction} from './styles';
 
 interface Props {
@@ -22,7 +22,7 @@ export const Fab = ({iconName, onPress, style: style = {}}: Props) => {
         style={currentStyle.fabBottom}>
         <Icon
           name={iconName}
-          color={theme.colors.text}
+          color={theme.text}
           size={30}
           style={currentStyle.icon}
         />

@@ -2,7 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 import {globalStyles} from '../../theme/appTheme';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {ThemeText} from '../ThemeText';
+import {ThemeText} from '../ThemeComponents/ThemeText';
 import {stylesFunction} from './styles';
 
 interface Props {

@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {View, useWindowDimensions} from 'react-native';
-import {ThemeContext} from '../../context/ThemeContext';
+import {ThemeContext} from '../../context/Theme/ThemeContext';
 import {stylesFunction} from './styles';
 
 interface Props {
