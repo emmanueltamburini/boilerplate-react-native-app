@@ -13,7 +13,7 @@ interface Props {
 
 export const TouchableIcon = ({
   name,
-  color = 'white',
+  color = undefined,
   size = 65,
   onPress,
   style,

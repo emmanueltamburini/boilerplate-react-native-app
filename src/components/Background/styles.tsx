@@ -1,5 +1,5 @@
 import {StyleSheet, ScaledSize} from 'react-native';
-import {ThemeState} from '../../context/themeReducer';
+import {ThemeState} from '../../context/Theme/themeReducer';
 import {bigWidthScreen} from '../../helpers/utils';
 
 export const stylesFunction = (theme: ThemeState, dimensions: ScaledSize) => {
@@ -17,13 +17,13 @@ export const stylesFunction = (theme: ThemeState, dimensions: ScaledSize) => {
   return StyleSheet.create({
     containerAllColor: {
       position: 'absolute',
-      backgroundColor: theme.colors.primary,
+      backgroundColor: theme.primary,
       width,
       height,
     },
     container: {
       position: 'absolute',
-      backgroundColor: theme.colors.primary,
+      backgroundColor: theme.primary,
       top,
       right,
       width,

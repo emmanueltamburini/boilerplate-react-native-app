@@ -8,7 +8,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     name: 'Test 2',
-    icon: 'alert-circle-outline',
+    icon: 'airplane-outline',
     component: 'TestScreen2',
   },
 ];

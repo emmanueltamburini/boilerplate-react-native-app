@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/core';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParams} from '../../navigator/Navigator';
-import {ThemeContext} from '../../context/ThemeContext';
+import {ThemeContext} from '../../context/Theme/ThemeContext';
 import {ThemeText} from '../ThemeText';
 import {stylesFunction} from './styles';
 

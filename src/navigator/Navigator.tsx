@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {HomeScreen} from '../screens/HomeScreen';
 import {NavigationContainer} from '@react-navigation/native';
-import {ThemeContext} from '../context/ThemeContext';
+import {ThemeContext} from '../context/Theme/ThemeContext';
 import {TestScreen} from '../screens/TestScreen';
 import {TestScreen2} from '../screens/TestScreen2';
 

@@ -7,7 +7,7 @@ import {
   ImageStyle,
 } from 'react-native';
 import {useAnimation} from '../../hooks/useAnimation';
-import {ThemeContext} from '../../context/ThemeContext';
+import {ThemeContext} from '../../context/Theme/ThemeContext';
 import {stylesFunction} from './styles';
 
 interface Props {

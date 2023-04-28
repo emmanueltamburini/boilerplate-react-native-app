@@ -1,5 +1,5 @@
 import {StyleSheet, StyleProp, ViewStyle, TextStyle} from 'react-native';
-import {ThemeState} from '../../context/themeReducer';
+import {ThemeState} from '../../context/Theme/themeReducer';
 
 export const stylesFunction = (
   style: StyleProp<ViewStyle>,
@@ -8,12 +8,12 @@ export const stylesFunction = (
   useContrastColor?: boolean,
   textStyle?: StyleProp<TextStyle>,
 ) => {
-  let backgroundColor = ignoreTheme ? 'black' : theme.colors.primary;
-  let color = ignoreTheme ? 'white' : theme.colors.text;
+  let backgroundColor = ignoreTheme ? undefined : theme.primary;
+  let color = ignoreTheme ? undefined : theme.text;
 
   if (useContrastColor) {
-    backgroundColor = theme.colors.text;
-    color = theme.colors.background;
+    backgroundColor = theme.text;
+    color = theme.background;
   }
 
   return StyleSheet.create({

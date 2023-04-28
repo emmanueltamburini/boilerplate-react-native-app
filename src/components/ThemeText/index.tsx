@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {Text, StyleProp, TextStyle} from 'react-native';
-import {ThemeContext} from '../../context/ThemeContext';
+import {ThemeContext} from '../../context/Theme/ThemeContext';
 import {stylesFunction} from './styles';
 
 interface Props {

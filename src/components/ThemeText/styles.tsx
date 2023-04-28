@@ -1,5 +1,5 @@
 import {StyleSheet, StyleProp, TextStyle} from 'react-native';
-import {ThemeState} from '../../context/themeReducer';
+import {ThemeState} from '../../context/Theme/themeReducer';
 
 export const stylesFunction = (
   theme: ThemeState,
@@ -8,7 +8,7 @@ export const stylesFunction = (
 ) => {
   const currentStyle = style ? style : {};
 
-  const color = ignoreTheme ? 'white' : theme.colors.text;
+  const color = ignoreTheme ? undefined : theme.text;
 
   return StyleSheet.create({
     text: {

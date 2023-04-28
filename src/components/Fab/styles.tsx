@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {ThemeState} from '../../context/themeReducer';
+import {ThemeState} from '../../context/Theme/themeReducer';
 
 export const styleFunction = (theme: ThemeState) =>
   StyleSheet.create({
@@ -7,7 +7,7 @@ export const styleFunction = (theme: ThemeState) =>
       zIndex: 9999,
       height: 50,
       width: 50,
-      backgroundColor: theme.colors.background,
+      backgroundColor: theme.background,
       borderRadius: 100,
       justifyContent: 'center',
       alignItems: 'center',
