@@ -6,7 +6,7 @@ import {useNavigation} from '@react-navigation/core';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParams} from '../../navigator/Navigator';
 import {ThemeContext} from '../../context/Theme/ThemeContext';
-import {ThemeText} from '../ThemeText';
+import {ThemeText} from '../ThemeComponents/ThemeText';
 import {stylesFunction} from './styles';
 
 interface Props {

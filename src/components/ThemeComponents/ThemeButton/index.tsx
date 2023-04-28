@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {TouchableOpacity, StyleProp, ViewStyle, TextStyle} from 'react-native';
 import {ThemeText} from '../ThemeText';
-import {ThemeContext} from '../../context/Theme/ThemeContext';
+import {ThemeContext} from '../../../context/Theme/ThemeContext';
 import {stylesFunction} from './styles';
 
 interface Props {

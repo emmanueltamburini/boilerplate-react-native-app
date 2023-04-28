@@ -1,5 +1,5 @@
 import {StyleSheet, StyleProp, ViewStyle, TextStyle} from 'react-native';
-import {ThemeState} from '../../context/Theme/themeReducer';
+import {ThemeState} from '../../../context/Theme/themeReducer';
 
 export const stylesFunction = (
   style: StyleProp<ViewStyle>,
